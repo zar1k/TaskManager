@@ -1,11 +1,15 @@
 .invisible-at-first {
     display: none;
 }
-.navbar-brand {
-    padding: 0px;
+
+.logo-home {
+    font-size: 20px;
+    text-decoration: none !important;
+    color: white !important;
 }
-.navbar-brand>img {
-    height: 100%;
-    padding: 15px;
-    width: auto;
+
+#logo-home-img {
+    height: 48px;
+    margin-top: 3px;
+    margin-left: 5px;
 }

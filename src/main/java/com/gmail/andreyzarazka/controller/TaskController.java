@@ -51,7 +51,7 @@ public class TaskController {
         return "index";
     }
 
-    @GetMapping("/update-task")
+    @PostMapping("/update-task")
     public String updateTask(@RequestParam int id, HttpServletRequest request) {
         request.setAttribute("task", taskService.findTaskByID(id));
         request.setAttribute("mode", "MODE_UPDATE");

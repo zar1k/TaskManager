@@ -31,11 +31,11 @@
     <![endif]-->
 </head>
 <body>
-<!-- Navigation -->
+<%-- Navigation --%>
 <div role="navigation">
     <div class="navbar navbar-inverse">
-        <a href="/" class="navbar-brand">
-            <img src="/static/img/logo-task-clipart-task.svg" height="48">
+        <a href="/" class="navbar-nav logo-home" title="Task Manager">
+            <img id="logo-home-img" src="/static/img/logo-task-clipart-task.svg">Task Manager
         </a>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-right navbar-nav">
@@ -45,8 +45,10 @@
         </div>
     </div>
 </div>
-<!-- /Navigation -->
+<%-- /Navigation --%>
+
 <c:choose>
+    <%-- Home --%>
     <c:when test="${mode == 'MODE_HOME'}">
         <div class="container" id="homeDiv">
             <div class="jumbotron text-center">
@@ -56,6 +58,9 @@
             </div>
         </div>
     </c:when>
+    <%-- /Home --%>
+
+    <%-- All tasks --%>
     <c:when test="${mode == 'MODE_TASKS'}">
         <div class="container text-center" id="tasksDiv">
             <h3>My Tasks</h3>
@@ -92,6 +97,9 @@
             </div>
         </div>
     </c:when>
+    <%-- /All tasks --%>
+
+    <%-- New task and update task --%>
     <c:when test="${mode == 'MODE_NEW' || mode == 'MODE_UPDATE'}">
         <div class="container text-center">
             <h3>Add a new task</h3>
@@ -132,6 +140,7 @@
             </form>
         </div>
     </c:when>
+    <%-- /New task and update task --%>
 </c:choose>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

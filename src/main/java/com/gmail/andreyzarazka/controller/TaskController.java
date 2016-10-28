@@ -18,7 +18,7 @@ import java.util.Date;
  */
 
 @Controller
-public class MainController {
+public class TaskController {
 
     @Autowired
     TaskService taskService;

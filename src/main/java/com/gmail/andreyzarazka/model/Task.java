@@ -8,11 +8,8 @@ import java.util.Date;
  */
 
 @Entity(name = "t_tasks")
-public class Task {
+public class Task extends BaseModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
     private String name;
     private String description;
     @Temporal(TemporalType.TIMESTAMP)
@@ -23,19 +20,10 @@ public class Task {
     }
 
     public Task(String name, String description, Date dateCreated, boolean finished) {
-        super();
         this.name = name;
         this.description = description;
         this.dateCreated = dateCreated;
         this.finished = finished;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -73,7 +61,7 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" +
-                "id=" + id +
+                "id=" + "" +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", dateCreated=" + dateCreated +

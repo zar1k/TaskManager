@@ -34,9 +34,11 @@
 <!-- Navigation -->
 <div role="navigation">
     <div class="navbar navbar-inverse">
-        <a href="/" class="navbar-brand">Task Manager</a>
+        <a href="/" class="navbar-brand">
+            <img src="/static/img/logo-task-clipart-task.svg" height="48">
+        </a>
         <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-right navbar-nav">
                 <li><a href="new-task">New Task</a></li>
                 <li><a href="all-tasks">All Tasks</a></li>
             </ul>
@@ -49,6 +51,8 @@
         <div class="container" id="homeDiv">
             <div class="jumbotron text-center">
                 <h1>Welcome to Tasks Manager</h1>
+                <br>
+                <img src="/static/img/task-management.jpg" class="img-responsive center-block">
             </div>
         </div>
     </c:when>
@@ -90,32 +94,40 @@
     </c:when>
     <c:when test="${mode == 'MODE_NEW' || mode == 'MODE_UPDATE'}">
         <div class="container text-center">
-            <h3>Manager Tasks</h3>
+            <h3>Add a new task</h3>
+            <hr>
             <form class="form-horizontal" method="post" action="save-task">
                 <input type="hidden" name="id" value="${task.id}"/>
                 <div class="form-group">
-                    <label class="control-label col-md-3">Name</label>
+                    <label class="control-label col-md-3" for="taskName">Name</label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" name="name" value="${task.name}"/>
+                        <input id="taskName" type="text" class="form-control" name="name" value="${task.name}"/>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3">Description</label>
+                    <label class="control-label col-md-3" for="taskDesc">Description</label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" name="description" value="${task.description}"/>
+                        <input type="text" id="taskDesc" class="form-control" name="description"
+                               value="${task.description}"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-md-3">Finished</label>
-                    <div class="col-md-6">
-                        <input type="radio" class="col-sm-1" name="finished" value="true"/>
-                        <div class="col-sm-1">Yes</div>
-                        <input type="radio" class="col-sm-1" name="finished" value="false" checked/>
-                        <div class="col-sm-1">No</div>
+                    <div class="col-md-1">
+                        <label class="radio-inline" for="finishedTrue">
+                            <input type="radio" id="finishedTrue" name="finished" value="true"/>Yes
+                        </label>
+                    </div>
+                    <div class="col-md-1">
+                        <label class="radio-inline" for="finishedFalse">
+                            <input type="radio" id="finishedFalse" name="finished" value="false" checked/>No
+                        </label>
                     </div>
                 </div>
-                <div class="form-group col-md-push-6">
-                    <input type="submit" class="btn btn-primary" value="Save"/>
+                <div class="form-group">
+                    <div class="col-md-offset-5 col-md-7">
+                        <input type="submit" class="btn btn-primary" value="Save"/>
+                    </div>
                 </div>
             </form>
         </div>

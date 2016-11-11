@@ -4,7 +4,10 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
- * Created by JOB on 27.10.2016.
+ * Simple Java object that present Task. This object @extends({@link BaseModel}) abstract class.
+ *
+ * @author A.Zarazka
+ * @version 1.0
  */
 
 @Entity(name = "t_tasks")
@@ -61,11 +64,10 @@ public class Task extends BaseModel {
     @Override
     public String toString() {
         return "Task{" +
-                "id=" + "" +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
+                "id=" + super.getId() +
+                ", name='" + name +
+                ", description='" + description +
                 ", dateCreated=" + dateCreated +
-                ", finished=" + finished +
-                '}';
+                ", finished=" + finished + '}';
     }
 }

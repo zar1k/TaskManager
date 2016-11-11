@@ -7,7 +7,10 @@ import javax.persistence.MappedSuperclass;
 import java.util.Objects;
 
 /**
- * Created by JOB on 28.10.2016.
+ * Base model entity.
+ *
+ * @author A.Zarazka
+ * @version 1.0
  */
 
 @MappedSuperclass

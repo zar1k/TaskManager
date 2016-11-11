@@ -14,7 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
- * Created by JOB on 27.10.2016.
+ * Controller for {@link Task}'s pages.
+ *
+ * @author A.Zarazka
+ * @version 1.0
  */
 
 @Controller

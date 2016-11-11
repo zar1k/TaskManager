@@ -1,9 +1,6 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: JOB
-  Date: 27.10.2016
-  Time: 14:33
-  To change this template use File | Settings | File Templates.
+  author A.Zarazka
+  version 1.0
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Boot Sample | Home</title>
+    <title>Task Manager for Spring Boot</title>
 
     <!-- Bootstrap -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
